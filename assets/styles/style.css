@@ -9,7 +9,7 @@ a{
 	font-size: 18px;
 	font-weight: 400;
 	text-decoration: none;
-	color: white;
+	color: #00a2c6;
 }
 
 a:hover{
@@ -46,14 +46,11 @@ li{
 	max-width:30%;
 	position:relative;
 	min-height:1px;
-	padding-right:15px;
-	padding-left:15px;
+	padding: 15px 15px 0px 15px;
 }
 
 .container{
 	width:100%;
-	padding-right:15px;
-	padding-left:15px;
 	margin-right:auto;
 	margin-left:auto;
 }
@@ -88,6 +85,6 @@ li{
 	display:flex;
 	-ms-flex-wrap:wrap;
 	flex-wrap:wrap;
-	margin-right:-15px;
-	margin-left:-15px;
+	margin-right:15px;
+	margin-left:15px;
 }
