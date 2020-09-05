@@ -1,1 +1,7 @@
-This repository is for my TBO assignment in college
+# Teori Bahasa dan Automata
+
+This repository is for my assignment in college.
+
+You can access it in this [link](https://alfianah.github.io/tbo-assignment-1/)
+
+Thanks
