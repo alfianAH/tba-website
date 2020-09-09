@@ -3,6 +3,8 @@
 body{
 	font-family: 'Montserrat', sans-serif;
 	line-height: 20pt;
+	background-color: #242424;
+	color: white;
 }
 
 a{
