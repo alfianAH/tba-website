@@ -79,6 +79,12 @@ nav li{
 	margin-left:auto;
 }
 
+.highlight-text{
+	font-size: 25;
+	font-weight: bold;
+	text-align: center;
+}
+
 .jumbotron{
 	font-size: 20px;
 	padding: 60px;
