@@ -56,6 +56,21 @@ nav li{
 	margin-right: 20px;
 }
 
+table{
+	width: 30%;
+	border: 5px solid #00a2c6;
+	border-collapse: collapse;
+	margin-top: 20px;
+	position: relative;
+}
+
+tr, th, td{
+	border: 1px solid #00a2c6;
+	line-height: 20pt;
+	padding:0 10px 0 10px;
+	width:50px;
+}
+
 .card{
 	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
