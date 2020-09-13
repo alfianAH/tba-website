@@ -175,6 +175,24 @@ print(c)
 
                         <p>Jika diperhatikan pada kode diatas, a, b, dan c adalah tipe data integer. Untuk tipe data integer memiliki 4 byte. Jika dikalikan dengan 3 variabel, maka hasilnya 12 bytes. Karena hasilnya merupakan konstanta, maka big O-nya adalah O(1).</p>
                     </section>
+
+                    <section>
+                        <h3>O(n)</h3>
+                        <p>Berikut adalah contoh kode untuk big O(n):
+<pre><code>numbers=[1, 2, 3, 4, 5]
+def get_max_num(input):
+    max = 0
+    for i in input:
+        if max < i:
+            max = i
+    return max
+
+max_num = get_max_num(numbers)
+</code></pre>
+                        </p>
+
+                        <p>Pada kode di atas kita memiliki array dengan <code>n</code> elemen. Dan kita mempunyai alokasi integer lainnya yang merupakan konstanta. Maka dari itu big O-nya adalah O(n)</p>
+                    </section>
                 </article>
             </div>
 
