@@ -162,7 +162,19 @@ fibo = fibonacci(6)
 
                 <article id="space-complexity" class="card">
                     <h2>Space Complexity</h2>
-                    <p></p>
+                    <p>Space complexity adalah total memori yang digunakan sebuah algoritma termasuk memori input value. Perlu diketahui bahwa algoritma yang baik harus mempunyai space complexity yang kecil. Semakin kecil ruang yang digunakan, semakin cepat program dieksekusi. Karena jika sebuah program membutuhkan banyak memori, <i>compiler </i> tidak dapat menjalankannya. Pada dasarnya penjelasan big O sudah dijelaskan di time complexity di atas. Jadi untuk contoh space complexity lebih ke kode dan penjelasannya. Berikut adalah contoh notasi big O di space complexity.</p>
+
+                    <section>
+                        <h3>O(1)</h3>
+                        <p>Berikut kode untuk big O(1):
+<pre><code>a = 5, b = 5, c
+c = a + b
+print(c)
+</code></pre>
+                        </p>
+
+                        <p>Jika diperhatikan pada kode diatas, a, b, dan c adalah tipe data integer. Untuk tipe data integer memiliki 4 byte. Jika dikalikan dengan 3 variabel, maka hasilnya 12 bytes. Karena hasilnya merupakan konstanta, maka big O-nya adalah O(1).</p>
+                    </section>
                 </article>
             </div>
 
@@ -177,7 +189,7 @@ fibo = fibonacci(6)
                         <li><a href="https://www.studytonight.com/data-structures/space-complexity-of-algorithms">https://www.studytonight.com/data-structures/space-complexity-of-algorithms</a></li>
                     </ul>
                 </article>
-                
+
                 <article id="profile card" class="profile card">
                     <h2>Info penulis</h2>
                     <p>Alfian Aldy Hamdani - D121181001</p>
