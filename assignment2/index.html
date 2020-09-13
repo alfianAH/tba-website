@@ -83,7 +83,7 @@
                         <h3>O(1)</h3>
                         <p>O(1), atau biasa disebut dengan waktu konstan, artinya banyaknya input yang diberikan kepada sebuah algoritma. Contoh:
 <pre><code>numbers = [1, 2, 3]
-fun sum(result):
+def sum(result):
     return result[0]
 
 result = sum(num)
@@ -145,9 +145,16 @@ sort_num = star(5)
 
                     <section>
                         <h3>O(2<sup>n</sup>)</h3>
-                        <p>Isi</p>
+                        <p>O(2<sup>n</sup>) atau biasa disebut Exponential Time menunjukkan algoritma yang pertumbuhannya berlipat ganda dengan setiap penambahan ke kumpulan data input. Kurva pertumbuhan big O(2<sup>n</sup>) bersifat eksponensial - dimulai dari sangat dangkal, kemudian naik secara drastis. Contoh:
+<pre><code>def fibonacci(number):
+    if number <= 1: return number
+    return (fibonacci(number-2) + fibonacci(number-1))
+
+fibo = fibonacci(6)
+</code></pre>                        
+                        </p>
                         <figure>
-                            <img src="" alt="" title="">
+                            <img src="../assets/images/o2n.png" alt="O(2^n)" title="O(2^n)">
                             <figcaption>Grafik Big O(2<sup>n</sup>). Sumber: <a href="https://medium.com/bee-solution-partners/penjelasan-sederhana-tentang-time-complexity-dan-big-o-notation-4337ba275cfe">link</a></figcaption>
                         </figure>
                     </section>
