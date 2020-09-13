@@ -18,6 +18,14 @@ a:hover{
 	font-weight: bold;
 }
 
+figcaption, figcaption a{
+	font-size: 15px;
+}
+
+figure{
+	text-align: center;
+}
+
 footer{
 	padding: 10px;
 	color: white;
@@ -56,6 +64,11 @@ nav li{
 	margin-right: 20px;
 }
 
+pre{
+	width: min-content;
+	color: #00c8eb;
+}
+
 table{
 	width: 30%;
 	border: 5px solid #00a2c6;
@@ -72,7 +85,7 @@ tr, th, td{
 }
 
 .card{
-	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 1);
 	border-radius: 5px;
 	padding: 20px;
 	margin-top: 20px;
