@@ -107,7 +107,7 @@ result = sum(num)
                         <h3>O(n)</h3>
                         <p>O(n) atau waktu linear adalah ketika runtime dari fungsi berbanding lurus dengan jumlah input yang diberikan. Contoh:
 <pre><code>numbers=[1, 2, 3, 4, 5]
-fun get_max_num(input):
+def get_max_num(input):
     max = 0
     for i in input:
         if max < i:
@@ -127,9 +127,18 @@ max_num = get_max_num(numbers)
 
                     <section>
                         <h3>O(n<sup>2</sup>)</h3>
-                        <p>Isi</p>
+                        <p>O(n<sup>2</sup>) atau Quadratic time adalah ketika runtime dari fungsi kita adalah sebesar <code>n<sup>2</sup></code>, di mana <code>n</code> adalah jumlah input dari fungsi tersebut. Biasanya terjadi pada perulangan bersarang atau (<i>nested looping</i>). Jika terdapat 2 perulangan yang bersarang maka big O-nya adalah O(n<sup>2</sup>). Jika terdapat 3 perulangan bersarang maka big O-nya adalah O(n<sup>3</sup>) dan seterusnya. Contoh:
+<pre><code>def star(input):
+for i in range(input):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+sort_num = star(5)
+</code></pre>
+                        </p>
                         <figure>
-                            <img src="" alt="" title="">
+                            <img src="../assets/images/on2.png" alt="O(n^2)" title="O(n^2)">
                             <figcaption>Grafik Big O(n<sup>2</sup>). Sumber: <a href="https://medium.com/bee-solution-partners/penjelasan-sederhana-tentang-time-complexity-dan-big-o-notation-4337ba275cfe">link</a></figcaption>
                         </figure>
                     </section>
