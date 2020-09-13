@@ -29,7 +29,7 @@
                     <ul>
                         <li><a href="#algoritma">Algoritma</a></li>
                         <li><a href="#bigO">Notasi Big O</a></li>
-                        <li><a href="#">Content 3</a></li>
+                        <li><a href="#time-complexity">Time Complexity</a></li>
                         <li><a href="#">Content 4</a></li>
                     </ul>
                 </article>
@@ -105,10 +105,23 @@ result = sum(num)
 
                     <section>
                         <h3>O(n)</h3>
-                        <p></p>
+                        <p>O(n) atau waktu linear adalah ketika runtime dari fungsi berbanding lurus dengan jumlah input yang diberikan. Contoh:
+<pre><code>numbers=[1, 2, 3, 4, 5]
+fun get_max_num(input):
+    max = 0
+    for i in input:
+        if max < i:
+            max = i
+    return max
+
+max_num = get_max_num(numbers)
+</code></pre>
+                        </p>
+
+                        <p>Untuk big O(n) biasanya terjadi pada proses perulangan (<i>looping</i>). Karena data akan diproses sebanyak <code>n</code> kali, maka dari itu big O nya adalah O(n).</p>
                         <figure>
-                            <img src="" alt="" title="">
-                            <figcaption></figcaption>
+                            <img src="../assets/images/on.png" alt="O(n)" title="O(n)">
+                            <figcaption>Grafik Big O(n). Sumber: <a href="https://medium.com/bee-solution-partners/penjelasan-sederhana-tentang-time-complexity-dan-big-o-notation-4337ba275cfe">link</a></figcaption>
                         </figure>
                     </section>
 
@@ -117,7 +130,7 @@ result = sum(num)
                         <p>Isi</p>
                         <figure>
                             <img src="" alt="" title="">
-                            <figcaption></figcaption>
+                            <figcaption>Grafik Big O(n<sup>2</sup>). Sumber: <a href="https://medium.com/bee-solution-partners/penjelasan-sederhana-tentang-time-complexity-dan-big-o-notation-4337ba275cfe">link</a></figcaption>
                         </figure>
                     </section>
 
@@ -126,7 +139,7 @@ result = sum(num)
                         <p>Isi</p>
                         <figure>
                             <img src="" alt="" title="">
-                            <figcaption></figcaption>
+                            <figcaption>Grafik Big O(2<sup>n</sup>). Sumber: <a href="https://medium.com/bee-solution-partners/penjelasan-sederhana-tentang-time-complexity-dan-big-o-notation-4337ba275cfe">link</a></figcaption>
                         </figure>
                     </section>
                 </article>

@@ -38,6 +38,12 @@ h2, h3{
 	color: #00a2c6;
 }
 
+img{
+	width: 50%;
+	height: auto;
+	object-fit: cover;
+}
+
 li{
 	margin-right: 20px;
 }
