@@ -7,7 +7,7 @@
     <body>
         <header>
             <div class="jumbotron">
-                <h1>Judul</h1>
+                <h1>NFA to DFA</h1>
             </div>
             <nav>
 				<ul>
@@ -21,18 +21,312 @@
         <main>
             <div id="content">
                 <article id="opening" class="card">
-                    <p>Pembukaan</p>
+                    <p>Ada dua jenis Finite State Automata yaitu Deterministic finite automata (DFA) dan Non-deterministic finite automata (NFA). Sebuah NFA dapat dikonversi menjadi DFA dengan langkah-langkah yang akan dijelaskan di bawah ini.</p>
 
                     <h2 id="contents">Table of Contents</h2>
                     <ul>
-                        <li><a href="#">Content 1</a></li>
-                        <li><a href="#">Content 2</a></li>
+                        <li><a href="#step">Langkah-Langkah Merubah NFA menjadi DFA</a></li>
+                        <li><a href="#example">Contoh Soal NFA menjadi DFA</a></li>
                     </ul>
                 </article>
 
-                <article id="evaluation-plan" class="card">
-                    <h2></h2>
-                    <p></p>
+                <article id="step" class="card">
+                    <h2>Langkah-Langkah Merubah NFA menjadi DFA</h2>
+                    <p>
+                        <ol>
+                            <li>Buat semua state yang merupakan subset dari state semula. jumlah state menjadi 2Q</li>
+                            <li>Telusuri transisi state–state yang baru terbentuk, dari diagram transisi.</li>
+                            <li>Tentukan state awal : {q0}</li>
+                            <li>Tentukan state akhir adalah state yang elemennya mengandung state akhir.</li>
+                            <li>Reduksi state yang tak tercapai oleh state awal</li>
+                        </ol>
+                    </p>
+                </article>
+
+                <article id="example" class="card">
+                    <h2>Contoh Soal</h2>
+                    <p>Pada tabel ini terdapat soal NFA yang nantinya akan dikonversi ke DFA. Berikut tabelnya.
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>0</th>
+                                <th>1</th>
+                            </tr>
+
+                            <tr>
+                                <td>{q0}</td>
+                                <td>{q0, q1}</td>
+                                <td>{q0}</td>
+                            </tr>
+
+                            <tr>
+                                <td>{q1}</td>
+                                <td></td>
+                                <td>{q2}</td>
+                            </tr>
+
+                            <tr>
+                                <td>*{q2}</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p>Sehingga dapat digambarkan menjadi sebagai berikut.
+                        <figure>
+                            <img src="../assets/images/nfa-to-dfa-ex.PNG" alt="Example" title="Example">
+                        </figure>
+                    </p>
+
+                    <p>Keterangan: * = <i>Finish State</i></p>
+
+                    <h3>Langkah-Langkah</h3>
+                    <p>
+                        <ol>
+                            <li>Buat semua state yang merupakan subset dari state semula. jumlah state menjadi 2Q
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>0</th>
+                                        <th>1</th>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q0}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q1}</td>
+                                        <td>-</td>
+                                        <td>{q2}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>*{q2}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>{q0, q1}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q0, q2}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q1, q2}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q0, q1, q2}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </li>
+                            
+                            <li>Telusuri transisi state–state yang baru terbentuk, dari diagram transisi.
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>0</th>
+                                        <th>1</th>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q0}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q1}</td>
+                                        <td>-</td>
+                                        <td>{q2}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>*{q2}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q2}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q0, q2}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q1, q2}</td>
+                                        <td>-</td>
+                                        <td>{q2}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q0, q1, q2}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q2}</td>
+                                    </tr>
+                                </table>
+                            </li>
+                            
+                            <li>Tentukan state awal : {q0}
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>0</th>
+                                        <th>1</th>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>->{q0}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q1}</td>
+                                        <td>-</td>
+                                        <td>{q2}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>*{q2}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q2}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q0, q2}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q1, q2}</td>
+                                        <td>-</td>
+                                        <td>{q2}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{q0, q1, q2}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q2}</td>
+                                    </tr>
+                                </table>
+                            </li>
+                            
+                            <li>Tentukan state akhir adalah state yang elemennya mengandung state akhir.
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>0</th>
+                                        <th>1</th>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q0}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q1}</td>
+                                        <td>-</td>
+                                        <td>{q2}</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>*{q2}</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q2}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>*{q0, q2}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>*{q1, q2}</td>
+                                        <td>-</td>
+                                        <td>{q2}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>*{q0, q1, q2}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q2}</td>
+                                    </tr>
+                                </table>
+                            </li>
+                            
+                            <li>Reduksi state yang tak tercapai oleh state awal
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>0</th>
+                                        <th>1</th>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>{q0}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+                
+                                    <tr>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0, q2}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>*{q0, q2}</td>
+                                        <td>{q0, q1}</td>
+                                        <td>{q0}</td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ol>
+                    </p>
+
+                    <p>Dari hasil langkah-langkah konversi di atas, maka akan didapatkan hasil sebagai berikut.
+                        <figure>
+                            <img src="../assets/images/nfa-to-dfa-ans.PNG" alt="Answer" title="Answer">
+                        </figure>
+                    </p>
                 </article>
             </div>
 
