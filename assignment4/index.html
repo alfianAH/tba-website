@@ -1,13 +1,13 @@
 <html>
     <head>
-        <title>Judul</title>
+        <title>Regular Expression</title>
         <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
     </head>
 
     <body>
         <header>
             <div class="jumbotron">
-                <h1>Judul</h1>
+                <h1>Regular Expression</h1>
             </div>
             <nav>
 				<ul>
@@ -21,18 +21,64 @@
         <main>
             <div id="content">
                 <article id="opening" class="card">
-                    <p>Pembukaan</p>
+                    <p>Regular Expression atau biasa disingkat regex atau regexp juga disebut sebagai rational expression. Biasanya pola seperti itu digunakan oleh algoritma pencarian string untuk operasi "find" atau "find and replace" pada string, atau untuk validasi input. Ini adalah teknik yang dikembangkan dalam ilmu komputer teoretis dan teori bahasa formal.</p>
 
                     <h2 id="contents">Table of Contents</h2>
                     <ul>
-                        <li><a href="#">Content 1</a></li>
-                        <li><a href="#">Content 2</a></li>
+                        <li><a href="#regexamples">Contoh-Contoh Pengaplikasian Regex</a></li>
                     </ul>
                 </article>
 
-                <article id="evaluation-plan" class="card">
-                    <h2></h2>
-                    <p></p>
+                <article id="regexamples" class="card">
+                    <h2>Contoh-Contoh Pengaplikasian Regex</h2>
+                    <p>Berikut adalah contoh-contoh aplikasi dari Regular Expression:</p>
+
+                    <ol>
+                        <section>
+                            <h3><li>Pencarian file di sistem operasi</h3>
+                                <p>Sebagai contoh, ketika anda ingin mencari file dengan nama <code>abc.txt.r13131</code> atau <code>file.java.r1293</code>. Maka, untuk melakukan pencariannya, kalian dapat menuliskan kode ini di command line</p>
+
+                                <pre><code>dir * /s/b | findstr \.r[0-9]+$</code></pre>
+
+                                <p>Pada akhir command, kalian dapat memperhatikan bahwa sistem akan mencari file dengan akhir "<code>.r</code>" dan sejumlah simbol numerik yang berubah-ubah</p>
+                            </li>
+                        </section>
+
+                        <section>
+                            <h3><li>Search Engine</h3>
+                                <p>Tentu kita sudah mengetahui beberapa search engine. Salah satu nya yang terkenal adalah Google. Contohnya ketika anda ingin mencari sebuah kata yang tidak mengandung unsur kata spesifik. </p>
+                                
+                                <p>Contoh: <code>Alfian -Hamdani</code>. 
+                                    <br>Maka Google akan memberikan hasil pencarian yang menampilkan kata Alfian dan tidak menampilkan kata Hamdani.</p>
+                            </li>
+                        </section>
+
+                        <section>
+                            <h3><li>Parsing</h3>
+                                <p>Parser menerjemahkan serangkaian simbol ke dalam abstraksi tingkat yang lebih tinggi seperti bahasa yang diformalkan (sering kali menggunakan tata bahasa yang mendasari untuk "memahami simbol"). Anda memerlukan parser untuk menulis bahasa pemrograman, sistem sintaks, atau editor teks anda sendiri</p>
+
+                                <p>Berikut adalah contoh mendapatkan nama fungsi pada python dengan menggunakan regular expression</p>
+
+                                <pre><code>import re
+code = '''
+def f1():
+    return 1
+def f2()
+    return 2
+'''
+print(re.findall('def ([a-zA-Z0-9_]+)', code))
+# ['f1', 'f2']</code></pre>
+                            </li>
+                        </section>
+
+                        <section>
+                            <h3><li>Sistem Highlight Syntax</h3>
+                                <p>Seperti yang dicontohkan sebelumnya tentang bagaimana mendapatkan nama fungsi, selanjutnya adalah bagaimana menciptakan sebuah teks editor bagi programmer sehingga lebih enak dipandang. Yaitu dengan memberikan warna-warna yang berbeda pada sintaks, seperti memberikan warna merah pada nama fungsi, warna abu-abu pada komentar dan lain sebagainya. Setiap teks editor pasti memiliki fitur tersebut, agar programmer dapat dengan mudah melihat sintaks</p>
+                            </li>
+                        </section>
+                    </ol>
+
+                    <p>Itulah sedikit contoh-contoh pengaplikasian Regular Expression. Semoga bermanfaat dan menambah wawasan anda.</p>
                 </article>
             </div>
 
