@@ -36,19 +36,47 @@
                     <ol>
                         <section>
                             <h3><li>Parser</li></h3>
-                            <p></p>
+                            <p>Banyak aspek dalam bahasa pemrograman memiliki struktur yang dapat dituliskan oleh Regular Expression. Beberapa bahasa pemrograman menggunakan tanda kurung dan/atau kurung kurawal. Artinya, kita harus dapat mencocokkan beberapa tanda kurung kiri dengan tanda kurung kanan yang muncul tepat di sebelah kanannya, menghapus keduanya, dan ulangi. Sebagai contoh string dengan tanda kurung yang seimbang adalah <code>(()), ()(), (()()), Ɛ</code>. Dan yang tidak seimbang, misalnya <code>)(, (()</code>.</p>
+
+                            <p>Contoh lain yaitu awal dan akhir dari blok kode, seperti <code>begin</code> dan <code>end</code> di Pascal atau kurung kurawal <code>{...}</code> di bahasa C. Contoh lain, <i>ieie, iie, iei</i> adalah urutan yang mungkin dari <code>if</code> dan <code>else</code>. Dan contoh ilegal dari <code>if-else</code> di atas adalah <i>ei, ieeii</i></p>
+
+                            <p>Contoh untuk iie:
+                                <pre><code>if(Condition){
+    if(Condition) Statement;
+    else Statement;
+}</code></pre>
+                            </p>
                         </section>
 
                         <section>
                             <h3><li>Markup Language</li></h3>
-                            <p></p>
+                            <p>Selain bahasa pemrograman, contoh aplikasi CFG lainnya adalah bahasa markup. "string" di bahasa ini ditandai dengan tag. Salah satu bahasa markup yang paling sering dilihat adalah HTML (HyperText Markup Language). Ada sejumlah kelas string yang terkait dengan dokumen HTML. Berikut adalah beberapa kelas string pada dokumen HTML:</p>
+                            <figure>
+                                <img src="../assets/images/markup-lang-class.PNG" alt="class" title="class">
+                            </figure>
                         </section>
 
                         <section>
                             <h3><li>XML dan Document-Type Definitions (DTD)</li></h3>
-                            <p></p>
+                            <p>Pada dasarnya semua bahasa pemrograman dapat dideskripsikan dengan CFG-nya sendiri, jadi akan lebih terkejut jika kita tidak bisa mendeskripsikan HTML. namun, ketika kita melihat bahasa markup lainnya, yaitu XML (eXtensible Markup Language), kita dapat menemukan bahwa CFG memainkan peran yang lebih penting, sebagai bagian dari proses penggunaan bahasa tersebut. XML mencoba mendeskripsikan "semantik" teks.</p>
+
+                            <p>Contoh, teks "Sultan Hasanuddin" seperti nama sebuah pahlawan, tapi dengan XML, kita dapat dengan pasti mengetahui bahwa teks di atas merupakan sebuah nama pahlawan dengan menggunakan tag yang merepresentasikan nama pahlawan. Contoh: <code>&lt;hero&gt;Sultan Hasanuddin&lt;/hero&gt;</code></p>
+
+                            <p>Untuk memperjelas jenis tag yang berbeda, dan struktur apa yang mungkin muncul di antara pasangan yang cocok dari tag ini, orang dengan minat yang sama diharapkan mengembangkan standar dalam bentuk DTD (Document-Type Definition). Alih-alih, bahasa ini menjeleaskan tentang pesan DTD, dan ingin tahu bagaimana CFG diekspresikan dalam bahasa ini.</p> 
+                            
+                            <p>Bentuk DTD seperti di bawah ini:
+                                <pre><code>&lt;!DOCTYPE name-of-DTD [
+    list of element definitions
+]&gt;</code></pre>
+                            </p>
+
+                            <p>Sebuah definisi elemen seperti di bawah ini:
+                                <pre><code>&lt;!ELEMENT element-name (description of the element)&gt;</code></pre>
+                            </p>
                         </section>
                     </ol>
+
+                    <p>Itulah contoh-contoh pengaplikasian Context Free Grammars. Sekian dan semoga bermanfaat.</p>
                 </article>
             </div>
 
