@@ -35,31 +35,30 @@
 
                     <ol>
                         <section>
-                            <h3><li>Pencarian file di sistem operasi</h3>
-                                <p>Sebagai contoh, ketika anda ingin mencari file dengan nama <code>abc.txt.r13131</code> atau <code>file.java.r1293</code>. Maka, untuk melakukan pencariannya, kalian dapat menuliskan kode ini di command line</p>
+                            <h3><li>Pencarian file di sistem operasi</li></h3>
+                            <p>Sebagai contoh, ketika anda ingin mencari file dengan nama <code>abc.txt.r13131</code> atau <code>file.java.r1293</code>. Maka, untuk melakukan pencariannya, kalian dapat menuliskan kode ini di command line</p>
 
-                                <pre><code>dir * /s/b | findstr \.r[0-9]+$</code></pre>
+                            <pre><code>dir * /s/b | findstr \.r[0-9]+$</code></pre>
 
-                                <p>Pada akhir command, kalian dapat memperhatikan bahwa sistem akan mencari file dengan akhir "<code>.r</code>" dan sejumlah simbol numerik yang berubah-ubah</p>
-                            </li>
+                            <p>Pada akhir command, kalian dapat memperhatikan bahwa sistem akan mencari file dengan akhir "<code>.r</code>" dan sejumlah simbol numerik yang berubah-ubah</p>
                         </section>
 
                         <section>
-                            <h3><li>Search Engine</h3>
-                                <p>Tentu kita sudah mengetahui beberapa search engine. Salah satu nya yang terkenal adalah Google. Contohnya ketika anda ingin mencari sebuah kata yang tidak mengandung unsur kata spesifik. </p>
-                                
-                                <p>Contoh: <code>Alfian -Hamdani</code>. 
-                                    <br>Maka Google akan memberikan hasil pencarian yang menampilkan kata Alfian dan tidak menampilkan kata Hamdani.</p>
-                            </li>
+                            <h3><li>Search Engine</li></h3>
+                            <p>Tentu kita sudah mengetahui beberapa search engine. Salah satu nya yang terkenal adalah Google. Contohnya ketika anda ingin mencari sebuah kata yang tidak mengandung unsur kata spesifik. </p>
+                            
+                            <p>Contoh: <code>Alfian -Hamdani</code>. 
+                                <br>Maka Google akan memberikan hasil pencarian yang menampilkan kata Alfian dan tidak menampilkan kata Hamdani.</p>
+                            
                         </section>
 
                         <section>
-                            <h3><li>Parsing</h3>
-                                <p>Parser menerjemahkan serangkaian simbol ke dalam abstraksi tingkat yang lebih tinggi seperti bahasa yang diformalkan (sering kali menggunakan tata bahasa yang mendasari untuk "memahami simbol"). Anda memerlukan parser untuk menulis bahasa pemrograman, sistem sintaks, atau editor teks anda sendiri</p>
+                            <h3><li>Parsing</li></h3>
+                            <p>Parser menerjemahkan serangkaian simbol ke dalam abstraksi tingkat yang lebih tinggi seperti bahasa yang diformalkan (sering kali menggunakan tata bahasa yang mendasari untuk "memahami simbol"). Anda memerlukan parser untuk menulis bahasa pemrograman, sistem sintaks, atau editor teks anda sendiri</p>
 
-                                <p>Berikut adalah contoh mendapatkan nama fungsi pada python dengan menggunakan regular expression</p>
+                            <p>Berikut adalah contoh mendapatkan nama fungsi pada python dengan menggunakan regular expression</p>
 
-                                <pre><code>import re
+                            <pre><code>import re
 code = '''
 def f1():
     return 1
@@ -68,13 +67,11 @@ def f2()
 '''
 print(re.findall('def ([a-zA-Z0-9_]+)', code))
 # ['f1', 'f2']</code></pre>
-                            </li>
                         </section>
 
                         <section>
-                            <h3><li>Sistem Highlight Syntax</h3>
-                                <p>Seperti yang dicontohkan sebelumnya tentang bagaimana mendapatkan nama fungsi, selanjutnya adalah bagaimana menciptakan sebuah teks editor bagi programmer sehingga lebih enak dipandang. Yaitu dengan memberikan warna-warna yang berbeda pada sintaks, seperti memberikan warna merah pada nama fungsi, warna abu-abu pada komentar dan lain sebagainya. Setiap teks editor pasti memiliki fitur tersebut, agar programmer dapat dengan mudah melihat sintaks</p>
-                            </li>
+                            <h3><li>Sistem Highlight Syntax</li></h3>
+                            <p>Seperti yang dicontohkan sebelumnya tentang bagaimana mendapatkan nama fungsi, selanjutnya adalah bagaimana menciptakan sebuah teks editor bagi programmer sehingga lebih enak dipandang. Yaitu dengan memberikan warna-warna yang berbeda pada sintaks, seperti memberikan warna merah pada nama fungsi, warna abu-abu pada komentar dan lain sebagainya. Setiap teks editor pasti memiliki fitur tersebut, agar programmer dapat dengan mudah melihat sintaks</p>
                         </section>
                     </ol>
 
