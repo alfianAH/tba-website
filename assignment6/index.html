@@ -37,31 +37,86 @@
 
                     <h2 id="contents">Table of Contents</h2>
                     <ul>
-                        <li><a href="#type0">Tipe 0 - Unrestricted Grammar</a></li>
-                        <li><a href="#type1">Tipe 1 - Context Sensitive Grammar</a></li>
-                        <li><a href="#type2">Tipe 2 - Free Grammar</a></li>
-                        <li><a href="#type3">Tipe 3 - Regular Grammar</a></li>
+                        <li><a href="#type0">Tipe 0 - Unrestricted Grammar (UG)</a></li>
+                        <li><a href="#type1">Tipe 1 - Context Sensitive Grammar (CSG)</a></li>
+                        <li><a href="#type2">Tipe 2 - Context Free Grammar (CFG)</a></li>
+                        <li><a href="#type3">Tipe 3 - Regular Grammar (RG)</a></li>
                     </ul>
                 </article>
 
                 <article id="type0" class="card">
-                    <h2>Tipe 0 - Unrestricted Grammar</h2>
-                    <p></p>
+                    <h2>Tipe 0 - Unrestricted Grammar (UG)</h2>
+                    <p>Tata bahasa (grammars) tipe-0 mencakup semua tata bahasa formal. Bahasa tata bahasa tipe 0 dikenali oleh mesin turing. Bahasa ini juga dikenal sebagai bahasa Recursively Enumerable.</p>
+
+                    <p>Produksi Tata Bahasa dalam bentuk</p>
+
+                    <p class="highlight-text">&alpha; &rarr; &beta;<br>
+                        &alpha; adalah (V+T)<sup>*</sup>V(V+T)<sup>*</sup><br>
+                        &beta; adalah (V+T)<sup>*</sup><br>
+                    </p>
+
+                    <p>Keterangan: V = Variabel, T = Terminal <br>
+                        Pada tipe 0, harus ada setidaknya satu variabel di sisi kiri produksi.
+                    </p>
+
+                    <p>Contoh:<br>
+                        Sab &rarr; ba <br>
+                        A &rarr; S<br>
+                        Dapat dilihat pada contoh di atas, S dan A adalah variabel. Sedangkan a, b adalah terminal.
+                    </p>
                 </article>
 
                 <article id="type1" class="card">
-                    <h2>Tipe 1 - Context Sensitive Grammar</h2>
-                    <p></p>
+                    <h2>Tipe 1 - Context Sensitive Grammar (CSG)</h2>
+                    <p>Tata bahasa tipe-1 menghasilkan bahasa yang peka konteks. Bahasa yang dihasilkan oleh tata bahasa dikenali oleh Linear Bound Automata. Seperti pada gambar di atas tadi, tata bahasa Tipe 1 juga merupakan Tipe 0.</p>
+
+                    <p>Produksi Tata Bahasa dalam bentuk</p>
+
+                    <p class="highlight-text">&alpha; &rarr; &beta;<br>
+                        &alpha; &le; &beta;
+                    </p>
+
+                    <p>Keterangan: banyak simbol di &alpha; harus lebih kecil atau sama dengan simbol di &beta;</p>
+
+                    <p>Contoh:<br>
+                        S &rarr; AB <br>
+                        AB &rarr; abc<br>
+                        B &rarr; b
+                    </p>
+
                 </article>
 
                 <article id="type2" class="card">
-                    <h2>Tipe 2 - Free Grammar</h2>
-                    <p></p>
+                    <h2>Tipe 2 - Context Free Grammar (CFG)</h2>
+                    <p>Tata bahasa tipe-2 menghasilkan bahasa tanpa konteks. Bahasa yang dihasilkan oleh tata bahasa dikenali oleh automata Pushdown. Tata bahasa tipe-2 menghasilkan bahasa tanpa konteks. Seperti pada gambar di atas tadi, tata bahasa Tipe 2 juga merupakan Tipe 1.</p>
+
+                    <p>Produksi Tata Bahasa dalam bentuk</p>
+
+                    <p class="highlight-text">&alpha; = 1</p>
+
+                    <p>Keterangan: Sisi kiri produksi hanya bisa memiliki 1 variabel. Dan tidak ada aturan yang mengatur &beta;</p>
+
+                    <p>Contoh:<br>
+                        S &rarr; AB<br>
+                        A &rarr; a<br>
+                        B &rarr; b
+                    </p>
                 </article>
 
                 <article id="type3" class="card">
-                    <h2>Tipe 3 - Regular Grammar</h2>
-                    <p></p>
+                    <h2>Tipe 3 - Regular Grammar (RG)</h2>
+                    <p>Tata bahasa tipe-3 menghasilkan bahasa biasa. Bahasa-bahasa ini persis dengan semua bahasa yang dapat diterima oleh robot negara hingga. Tipe 3 ini merupakan tata bahasa yang paling ketat aturannya. Seperti pada gambar di atas tadi, tata bahasa Tipe 3 juga merupakan Tipe 2.</p>
+
+                    <p>Produksi Tata Bahasa dalam bentuk</p>
+
+                    <p class="highlight-text">V &rarr; VT<sup>*</sup>/T<sup>*</sup><br>
+                        atau<br>
+                        V &rarr; T<sup>*</sup>V/T<sup>*</sup>
+                    </p>
+
+                    <p>Contoh:<br>
+                        S &rarr; ab
+                    </p>
                 </article>
             </div>
 
