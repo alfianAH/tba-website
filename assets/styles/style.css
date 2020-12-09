@@ -76,7 +76,7 @@ pre{
 }
 
 table{
-	width: 30%;
+	width: auto;
 	border: 5px solid #00a2c6;
 	border-collapse: collapse;
 	margin-top: 20px;
@@ -84,6 +84,7 @@ table{
 }
 
 tr, th, td{
+	white-space: nowrap;
 	border: 1px solid #00a2c6;
 	line-height: 20pt;
 	padding:0 10px 0 10px;

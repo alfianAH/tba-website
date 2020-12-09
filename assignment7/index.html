@@ -26,7 +26,7 @@
                     <h2 id="contents">Table of Contents</h2>
                     <ul>
                         <li><a href="#definition">Definisi Mesin Turing</a></li>
-                        <li><a href="#">Content 2</a></li>
+                        <li><a href="#example">Contoh Mesin Turing</a></li>
                     </ul>
                 </article>
 
@@ -50,6 +50,220 @@
                         <li><b>q0</b> adalah status awal</li>
                         <li><b>F</b> dalah himpunan keadaan akhir. Jika ada status F tercapai, string input diterima.</li>
                     </ol>
+                </article>
+
+                <article id="example" class="card">
+                    <h2>Contoh Mesin Turing</h2>
+                    <p>Agar lebih paham dengan mesin turing, berikut adalah contoh untuk mesin turing.</p>
+
+                    <p>Buatlah mesin turing untuk L = {0<sup>n</sup>1<sup>n</sup> | n &ge; 1}</p>
+
+                    <ul>
+                        <li>Q = {q0, q1, q2, q3}, di mana q1 adalah initial state</li>
+                        <li>T = {0, 1, X, Y, B}, di mana B merepresentasikan simbol kosong</li>
+                        <li>&Sigma; = {0, 1}</li>
+                        <li>F = {q3}</li>
+                    </ul>
+
+                    <p>Maka fungsi transaksi &delta; menjadi tabel di bawah ini: </p>
+
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>B</th>
+                        </tr>
+
+                        <tr>
+                            <td><b>q0</b></td>
+                            <td>(q1, X, R)</td>
+                            <td></td>
+                            <td></td>
+                            <td>(q3, Y, R)</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>q1</b></td>
+                            <td>(q1, 0, R)</td>
+                            <td>(q2, Y, L)</td>
+                            <td></td>
+                            <td>(q1, Y, R)</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>q2</b></td>
+                            <td>(q2, 0, L)</td>
+                            <td></td>
+                            <td>(q0, X, R)</td>
+                            <td>(q2, Y, L)</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>q3</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>(q3, Y, R)</td>
+                            <td><b>Halt</b></td>
+                        </tr>
+                    </table>
+
+                    <p>Mari kita coba bagaimana mesin turing bekerja dengan input 0011. Permulaainya dimulai dari 0 yang ditebali berwarna merah</p>
+
+                    <table>
+                        <td>B</td>
+                        <td style="color: red;"><b><u>0</u></b></td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>B</td>
+                    </table>
+
+                    <p>Penyelesaian:</p>
+
+                    <ol>
+                        <li>Langkahnya adalah &delta; (q0, 0) = (q1, X, R). Artinya, ia akan pergi ke status q1, ganti 0 dengan X dan kepala akan bergerak ke kanan sebagai:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td style="color: red;"><b><u>0</u></b></td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahan akan menjadi &delta; (q1, 0) = (q1, 0, R) yang berarti ia akan tetap dalam keadaan yang sama dan tanpa mengubah simbol apapun, ia akan bergerak ke kanan seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td>0</td>
+                                <td style="color: red;"><b><u>1</u></b></td>
+                                <td>1</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q1, 1) = (q2, Y, L) yang artinya akan berpindah ke keadaan q2 dan ubah 1 menjadi Y, maka akan berpindah ke kiri seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td style="color: red;"><b><u>0</u></b></td>
+                                <td>Y</td>
+                                <td>1</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q2, 0) = (q2, 0, L) yang artinya akan berpindah ke keadaan q2 dan ubah 0 menjadi 0, maka akan berpindah ke kiri seperti:
+                            <table>
+                                <td>B</td>
+                                <td style="color: red;"><b><u>X</u></b></td>
+                                <td>0</td>
+                                <td>Y</td>
+                                <td>1</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q2, X) = (q0, X, R) yang artinya akan berpindah ke keadaan q0 dan ubah X menjadi X, maka akan berpindah ke kanan seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td style="color: red;"><b><u>0</u></b></td>
+                                <td>Y</td>
+                                <td>1</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q0, 0) = (q1, X, R) yang artinya akan berpindah ke keadaan q1 dan ubah 0 menjadi X, maka akan berpindah ke kanan seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td style="color: red;"><b><u>Y</u></b></td>
+                                <td>1</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q1, Y) = (q1, Y, R) yang artinya akan berpindah ke keadaan q1 dan ubah Y menjadi Y, maka akan berpindah ke kanan seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>Y</td>
+                                <td style="color: red;"><b><u>1</u></b></td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q1, 1) = (q2, Y, L) yang artinya akan berpindah ke keadaan q2 dan ubah 1 menjadi Y, maka akan berpindah ke kiri seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td style="color: red;"><b><u>Y</u></b></td>
+                                <td>Y</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q2, Y) = (q2, Y, L) yang artinya akan berpindah ke keadaan q2 dan ubah Y menjadi Y, maka akan berpindah ke kiri seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td style="color: red;"><b><u>X</u></b></td>
+                                <td>Y</td>
+                                <td>Y</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q2, X) = (q0, X, R) yang artinya akan berpindah ke keadaan q0 dan ubah X menjadi X, maka akan berpindah ke kanan seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td style="color: red;"><b><u>Y</u></b></td>
+                                <td>Y</td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q0, Y) = (q3, Y, R) yang artinya akan berpindah ke keadaan q3 dan ubah Y menjadi Y, maka akan berpindah ke kanan seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>Y</td>
+                                <td style="color: red;"><b><u>Y</u></b></td>
+                                <td>B</td>
+                            </table>
+                        </li>
+
+                        <li>Perpindahannya menjadi &delta; (q3, Y) = (q3, Y, R) yang artinya akan berpindah ke keadaan q3 dan ubah Y menjadi Y, maka akan berpindah ke kanan seperti:
+                            <table>
+                                <td>B</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                                <td style="color: red;"><b><u>B</u></b></td>
+                            </table>
+                        </li>
+
+                        <li>Menggunakan gerakan &delta; (q3, B) = halt, itu akan berhenti dan diterima.</li>
+                    </ol>
+
+                    <p>Seperti itulah contoh dari mesin turing. Semoga bermanfaat.</p>
                 </article>
             </div>
 
