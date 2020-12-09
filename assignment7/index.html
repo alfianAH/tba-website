@@ -21,18 +21,35 @@
         <main>
             <div id="content">
                 <article id="opening" class="card">
-                    <p>Pembukaan</p>
+                    <p>Mesin Turing adalah perangkat penerima yang menerima bahasa (kumpulan yang dapat dihitung secara rekursif) yang dihasilkan oleh tata bahasa tipe 0. Itu ditemukan pada tahun 1936 oleh Alan Turing. Mesin Turing (TM) adalah model matematika yang terdiri dari pita panjang tak terbatas yang dibagi menjadi sel-sel tempat input diberikan.</p>
 
                     <h2 id="contents">Table of Contents</h2>
                     <ul>
-                        <li><a href="#">Content 1</a></li>
+                        <li><a href="#definition">Definisi Mesin Turing</a></li>
                         <li><a href="#">Content 2</a></li>
                     </ul>
                 </article>
 
-                <article id="" class="card">
-                    <h2></h2>
-                    <p></p>
+                <article id="definition" class="card">
+                    <h2>Definisi Mesin Turing</h2>
+                    <p>Mesin turing terdiri dari pita  (<i>tape</i>) dengan panjang tak terbatas tempat operasi baca dan tulis dapat dilakukan. Pita itu terdiri dari sel tak terbatas di mana setiap sel berisi simbol masukan atau simbol khusus yang disebut kosong. Ini juga terdiri dari penunjuk kepala yang menunjuk ke sel yang saat ini sedang dibaca dan dapat bergerak di kedua arah.</p>
+
+                    <figure>
+                        <img src="../assets/images/tape-turing-machine.png" alt="Turing Machine" title="Turing Machine">
+                        <figcaption>Mesin Turing</figcaption>
+                    </figure>
+
+                    <p>Mesin turing dapat dinyatakan sebagai 7 tupel. Berikut adalah penjelasannya:</p>
+
+                    <ol>
+                        <li><b>Q</b> adalah himpunan keadaan yang terbatas</li>
+                        <li><b>T</b> adalah tape alphabet (simbol yang dapat ditulis pada tape)</li>
+                        <li><b>B</b> adalah simbol kosong (setiap sel diisi dengan B kecuali alfabet masukan pada awalnya)</li>
+                        <li><b>&Sigma;</b> adalah alfabet masukan (simbol yang merupakan bagian dari alfabet masukan)</li>
+                        <li><b>&delta;</b> adalah fungsi transisi yang memetakan Q × T → Q × T × {L, R}. Bergantung pada status saat ini dan alfabet pita saat ini (ditunjukkan oleh penunjuk kepala), ia akan berpindah ke status baru, mengubah simbol pita (mungkin atau mungkin tidak) dan memindahkan penunjuk kepala ke kiri atau kanan.</li>
+                        <li><b>q0</b> adalah status awal</li>
+                        <li><b>F</b> dalah himpunan keadaan akhir. Jika ada status F tercapai, string input diterima.</li>
+                    </ol>
                 </article>
             </div>
 
